@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT membres (membre*)>
+<!ELEMENT membre (id, messages)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT messages (message*)>
+<!ELEMENT message (date, texte)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT texte (#PCDATA)>

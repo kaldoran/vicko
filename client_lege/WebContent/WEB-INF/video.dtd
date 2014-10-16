@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT video (titre, lien, texte, date, auteur, nb_vote)>
+<!ATTLIST video id_video CDATA "0">
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT lien (#PCDATA)>
+<!ELEMENT texte (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT auteur (#PCDATA)>
+<!ELEMENT nb_vote (#PCDATA)>

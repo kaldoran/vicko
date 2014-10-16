@@ -1,0 +1,12 @@
+Schéma P2P :
+- demande connexion au client : si connexion failed alors on recommence, sinon le serveur renvoie l'id du membre
+- connecté en lui envoyant son ip et son id.
+- liste des membre connectés et non connectés. Cette liste doit contenir l'ip du membre, son id, son nom/prenom (ou pseudo).
+- liste des messages qui lui ont été envoyé lorsqu'il n'était pas en ligne au serveur. Celui ci répond par l'id, le prenom/nom/pseudo, message et heure du message du mec qui a envoyé le message. Bien penser à supprimer ces messages (maintenant qu'ils sont envoyés au client, le serveur n'en a plus besoin)
+- Client lourd peut dire au serveur qu'il se déconnecte du chat : j'envoie l'id du membre + 0/1 (pour dire si je suis connecté ou non).
+- Client lourd peut envoyer une requete à destination d'un autre membre. Dans ce cas j'envoie l'id du destinataire, le message + heure message et l'id de l'envoyeur.
+
+Ronan, N'importe qui : 
+    Permettre d'ajouter une vidéo dans la playlist depuis une vidéo en cours
+    ( Ajout bouton ) 
+

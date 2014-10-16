@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT playlists (titre*)>
+<!ATTLIST titre id_article CDATA "0">
+<!ELEMENT titre (#PCDATA)>

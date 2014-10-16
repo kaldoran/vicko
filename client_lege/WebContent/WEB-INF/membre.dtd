@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT membre (informations*)>
+<!ELEMENT informations (pseudo, description, sexe, email, nb_article, nb_commentaire, date_inscription)>
+<!ELEMENT pseudo (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT sexe (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT nb_article (#PCDATA)>
+<!ELEMENT nb_commentaire (#PCDATA)>
+<!ELEMENT date_inscription (#PCDATA)>

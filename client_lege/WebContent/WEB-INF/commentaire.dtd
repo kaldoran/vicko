@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT commentaires (commentaire*)>
+<!ELEMENT commentaire (auteur, texte, date)>
+<!ATTLIST commentaire id_commentaire CDATA "0">
+<!ELEMENT auteur (#PCDATA)>
+<!ELEMENT texte (#PCDATA)>
+<!ELEMENT date (#PCDATA)>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT connectes (membre*)>
+<!ELEMENT membre (#PCDATA)>
+<!ATTLIST membre ip_membre CDATA "0">
+<!ATTLIST membre id_membre CDATA "0">
+<!ATTLIST membre connecte CDATA "0">

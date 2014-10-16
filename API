@@ -1,0 +1,176 @@
+ATTENTION : UPDATE BDD POUR VOS TESTS !		- 	14 / 04 / 14
+--------------------------------------------------------------------------------------------------------------------
+
+POUR RONAN : 
+
+	Connexion :
+	En données POST A http://localhost:8080/web/Connexion:
+		username - Pseudo de l'utilisateur a tester
+		password - Mot de passe de l'utilisateur a tester
+		type - "client"
+		
+	Affiche :
+		l'id du membre si ok - Mot de passe + pseudo correct
+		-1 sinon - Mot de passe + Pseudo incorrect
+Membre :
+	En données POST à http://localhost:8080/web/Membre:
+		id_membre - Id du membre dont on veut les infos
+		pseudo - pseudo du membre
+	
+	Remplir un des 2 champs au choix
+	
+	Affiche : 
+		Informations corréspondant a la dtd "membre.dtd"
+		
+Recherche :
+	En données POST a http://localhost:8080/web/Recherche :
+		search - Chaine de caractere a rechercher ( Dans les titres des vidéos )
+		type - Type de la recherche :
+				m - Par popularité croissante
+				p - Par popularité décroissante
+				n - Par date ( plus récent au moins récent ) 
+				r - Par date ( plus récent au moins récent )
+		Si search n'est pas précisé alors la recherche sera fait uniquement par le critere type
+		r étant prioritaire si rien n'est renseigné
+		
+	Affiche : 
+		Liste de vidéo répondant a "recherche.dtd"
+	
+Vidéo :
+	En données POST à http://localhost:8080/web/Video :
+		id_video - Id de la vidéo dont les données sont cherchées.
+		
+	Affiche :
+		Liste des vidéos répondant a "video.dtd"
+
+Commentaire :
+	En données POST a http://localhost:8080/web/Commentaire :
+		id_video - Id de la vidéo dont les commentaires sont recherchés
+	
+	Affiche : 
+		Listes des commentaires associée a l'id_video en répondant a "commentaire.dtd"
+		
+Envoi Vote :
+	En données POST a http://localhost:8080/web/EnvoiVote
+		id_membre - Id du membre qui vote
+		id_article - Id de l'article sur lequel une personne vote
+		value - Supérieur a 0 si jamais c'est un vote position 
+			   inférieur sinon
+	
+	Affiche :
+		true - Si aucune erreur ( membre ayant pas voté etc ) 
+		false - Sinon 
+
+Envoi video : 
+	En données POST a http://localhost:8080/web/EnvoiVideo :
+		id_membre - Id de l'auteur du post
+		lien - Lien vers la video Youtube !
+		lien_miniature - Lien vers la miniature
+		titre - titre de la video
+		texte - descriptin de la video
+
+	Affiche : 
+		true si aucune ereur
+		false sinon
+	
+Envoi commentaire :
+	En données POST a http://localhost:8080/web/EnvoiCommentaire :
+		id_membre - Id de l'auteur du commentaire
+		id_article - Id de l'article sur lequel une personne commente
+		commentaire - Commentaire de al video
+		
+	Affiche : 
+		true si aucune erreur
+		false sinon
+		
+Inscription : 
+	En données POST a http://localhost:8080/web/Inscription
+		username - Pseudo de l'utilisateur
+		password - Mot de passe
+		password2 - Confirmation du mdp
+		email - Email du membre
+		sexe - Sexe du membre
+	
+	Affiche :
+		true en cas de succes
+		false sinon
+
+Playlist :
+	En données POST ou GET a http://localhost:8080/web/Playlist
+		pseudo - Pseudo du membre dont on souhaite reucperer la plyalist
+		
+	Affiche :
+		Liste des vidéos répondant a "playlist.dtd"
+
+Ajout playlist :
+	En données POST a http://localhost:8080/web/Playlist
+		pseudo - Pseudo du membre auquel ont veut ajouter une video
+		id_article - id de larticle a ajouter
+	Affiche :
+		True en cas de succes
+		false sinon 
+--------------------------------------------------------------------------------------------------------------------
+POUR FLORIAN :
+		
+Liste des connectés :
+	En données GET à http://localhost:8080/web/Connecte
+	
+	Affiche :
+		Listes des connéctes et non connectés répondant a "connecte.dtd"
+
+Mise a jours connexion :
+	En données POST a http://localhost:8080/web/Connecte
+		id_membre - id du membre a mettre a jour
+		ip_membre - ip du membre
+		coOrNot - Booleen, si il est égal a 1, le membre sera connecté [ Pendant 30 Min ]
+				Si il vaut 0, le membre sera consideré comme deconnecté
+	
+	Affiche : 
+		True en cas de succes
+		False Sinon
+		
+Message :
+    En données POST à http://localhost:8080/client_lege/Message 
+    	id_membre - id du membre pour lequel on veut récuperer les messages
+    	
+    Affiche :
+        Listes des messages groupées par id d'envoyeur répondant a "message.dtd"
+        
+Envoi Message : 
+	En données POST à http://localhost:8080/client_lege/EnvoiMessage :
+		id_membre_src - id de la personne qui envoi le message
+		id_membre_dest - id de la personne qui recoit le message
+		texte - Message
+		
+	Affiche : 
+		true en cas de succes
+		False sinon ( False si , id_membre_src = id_membre_dest ou que un des champs est vide )
+		
+-------------------------------------   ATTENTION UNE AUTO-DECONNECTION EST EN PLACE APRES 30 MIN !
+
+--------------------------------------------------------------------------------------------------------------------
+Comment tester : 
+	Lancer le serveur Tomcat ( normalement si vous y allez depuis le navigateur vous allez avoir le message "Get Out !"
+	
+	Pour tester aper donc ceci :
+		wget -O- --post-data="post=valeur" page
+	
+	Exemple : 
+		wget -O- --post-data="id_membre=1" http://localhost:8080/web/Membre
+
+	Donnera : 
+		<membre>
+			<informations>
+				<pseudo>Kaldoran</pseudo>
+				<description>grosse bite</description>
+				<sexe>M</sexe>
+				<email>lol@hotmail.fr</email>
+				<nb_article>3</nb_article>
+				<nb_commentaire>1</nb_commentaire>
+				<date_inscription>01-03-2014</date_inscription>
+			</informations>
+		</membre>
+		
+Ps : cette page sera possiblement amenée a changer.
+
+Redaction : Reynaud Nicolas

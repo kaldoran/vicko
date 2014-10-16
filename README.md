@@ -1,4 +1,10 @@
-youfree
-=======
+# Projet TIA
 
-Youtube Free software in Java
+## Résumé
+Projet avec un langage de merde
+
+## Auteurs
+ABHAMON Ronan, BIGARD Florian, HIVERT Kevin, REYNAUD Nicolas.
+
+## Date 
+2014

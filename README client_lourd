@@ -1,0 +1,17 @@
+Nico, client lourd :
+Connexion fonctionnelle, 
+pour savoir si un membre a donné le bon mdp / pseudo envoyez en méthode post les données dans les champs 
+username et password
+La page affichera true , si le membre est connecté, false sinon
+
+Attention ceci sera changé et il y aura une correspondance avec une "connexion_membre.dtd"
+Un exemple en bash :
+	wget -O- --post-data="username=Kaldoran&password=ok" http://localhost:8080/web/Connexion
+
+Nico, client lourd :
+Recherche fonctionnelle, elle respecte la dtd recherche.dtd
+Envoi en méthode post de donnée que vous voulez dans le champs "search"
+Exemple en bash :
+	wget -O- --post-data="search=lol" http://localhost:8080/web/Recherche
+	
+Pensez a ajouter un article dans la BDD pour tester ;)

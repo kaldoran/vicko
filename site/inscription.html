@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <title>Index - Vicko</title>
+</head>
+<body>
+    <form action="" method="POST">
+    <div id="head-top">
+        <div id="head-global">
+            <a href="index.html"><div id="logo_container"><div id="logo"></div></div></a>
+            <div id="searchbar">
+                <input type="text" title="Rechercher" value="" name="search" />
+                <input type="submit" title="" value="" />
+            </div>
+            <div id="user">
+                <button class="connexion" type="button" onclick=";self.location.href='connexion.html';return false;">Connexion</button>
+            </div>
+        </div>
+    </div>
+    </form>
+    <div id="body">
+        <div id="video">
+            <div id="formulaire">
+                <form action="#" method="POST">
+                    <table>
+                        <tr>
+                            <td><label class="lsimp" for="username">Identifiant :</label></td>
+                            <td><input type="text" id="username" name="username" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td><label class="lsimp" for="password">Mot de passe :</label></td>
+                            <td><input type="password" id="password" name="password" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="lsimp" for="password2">Confirmez votre mot de passe :</label></td>
+                            <td><input type="password" id="password2" name="password2" /></td>
+                        </tr>
+                        <tr>
+                            <td><label class="lsimp" for="email">E-mail :</label></td>
+                            <td><input type="text" id="email" name="email"value=""/></td>
+                        </tr>
+                        <tr>
+                            <td>Sexe :</td>
+                            <td><input type="radio" id="H" name="sexe" value='H'/> 
+                            <label class="lgenre" for="H">Homme</label>
+                            <input type="radio" id="F" name="sexe" value='F' /> 
+                            <label class="lgenre" for="F">Femme</label></td>
+                        </tr>
+                        <tr><td colspan="2" style="text-align: center;"><input type="submit" value="Se connecter" name="send" /></td></tr>
+
+                    </table>
+                </form>
+            </div>
+            <div id="copyright">[Reynaud Nicolas] ~ Copyright : 2014 - Vicko - Partage de video - Tous droits reserves.</div>
+        </div>
+        <div id="menu">
+            <ul class="playlist">Link
+                <li><a href="">Accueil</a></li>
+                <li><a href="">Top</a></li>
+                <li><a href="">Flop</a></li>
+                <li><a href="">Rand</a></li>
+            </ul>
+            <hr class="separator">
+            <ul class="playlist">Mes playlists
+                <li><a href="">Aucune playlist</a></li>
+            </ul>
+            <hr class="separator">
+            <ul class="playlist"> Mon profil<br />
+                <img src="images/profil.gif" height="150" width="150">
+                <li class="profil">Administateur</li>
+                <br />
+                <li class="profil">Pseudo : Kaldoran</li>
+                <li class="profil">Date inscription : 07/04/14</li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+</html>
